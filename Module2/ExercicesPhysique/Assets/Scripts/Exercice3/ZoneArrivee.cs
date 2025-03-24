@@ -37,15 +37,16 @@ public class ZoneArrivee : MonoBehaviour
      */
     private GameObject DupliquerBalle(GameObject balle)
     {
+
         GameObject nouvelle = GameObject.Instantiate(balle);
         Destroy(balleActive.GetComponent<MouvementBalle>());
         return nouvelle;        
     }
-
+    
     /**
      * Replace la balle à son endroit intial
      */
-    private void ReplacerBalle(GameObject balle)
+    public void ReplacerBalle(GameObject balle)
     {
         MouvementBalle instanceMouvement = balle.GetComponent<MouvementBalle>();
         instanceMouvement.PositionInitiale = positionDepart;

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
-/// Script  qui fait gère le déplacement de la caméra avec la souris
+/// Script  qui fait gï¿½re le dï¿½placement de la camï¿½ra avec la souris
 /// </summary>
 public class VueSouris : MonoBehaviour
 {
@@ -24,13 +24,13 @@ public class VueSouris : MonoBehaviour
     /// </summary>
     private GameObject joueur;
     /// <summary>
-    /// La rotation en X. On les garde dans une variable pour ne pas avoir à tenir compte de
-    /// la façon dont c'est stocké à l'interne. Permet de conserver un angle négatif.
+    /// La rotation en X. On les garde dans une variable pour ne pas avoir ï¿½ tenir compte de
+    /// la faï¿½on dont c'est stockï¿½ ï¿½ l'interne. Permet de conserver un angle nï¿½gatif.
     /// </summary>
     private float rotationX;
     /// <summary>
-    /// La rotation en Y.  On les garde dans une variable pour ne pas avoir à tenir compte de
-    /// la façon dont c'est stocké à l'interne. Permet de conserver un angle négatif.
+    /// La rotation en Y.  On les garde dans une variable pour ne pas avoir ï¿½ tenir compte de
+    /// la faï¿½on dont c'est stockï¿½ ï¿½ l'interne. Permet de conserver un angle nï¿½gatif.
     /// </summary>
     private float rotationY;
 
@@ -50,7 +50,7 @@ public class VueSouris : MonoBehaviour
         rotationY += horizontal;
         joueur.transform.rotation = Quaternion.Euler(0, rotationY, 0);
 
-        // Rotation sur la caméra
+        // Rotation sur la camï¿½ra
         float vertical = Input.GetAxis("Mouse Y") * Time.deltaTime * vitesseRotation;
         rotationX -= vertical;
         rotationX = Mathf.Clamp(rotationX, angleMinimum, angleMaximum);
